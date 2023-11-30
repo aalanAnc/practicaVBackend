@@ -17,7 +17,6 @@ try {
 
   if (!MONGO_URL) {
     console.log("No se ha encontrado la url proporcionada para mongo");
-    Deno.exit(1);
   }
   const app = express();
   await mongoose.connect(MONGO_URL);
