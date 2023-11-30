@@ -8,14 +8,14 @@ export const buscarClienteID = async (res: Response, req: Request) => {
     const clienteID = await ClientModel.findById(id);
     if (!clienteID) {
       return res.status(400).json({
-        message: `No se ha encontrado la reserva por ese id`,
+        message: `No se ha encontrado el Cliente por ese id`,
       });
     }
     res.status(200).json({ clienteID });
   } catch (error) {
     res.status(400).json({
       error: error.message,
-      message: `No se ha podido encontrar la reserva`,
+      message: `No se ha podido encontrar el Cliente`,
     });
   }
 };
